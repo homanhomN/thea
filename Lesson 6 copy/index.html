@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Table & Form</title>
+  </head>
+  <body>
+    <h1>Table</h1>
+    <table border="1px">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Job</th>
+          <th>Phone No</th>
+          <th>Salary</th>
+        </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>1</td>
+        <td>Ahmad</td>
+        <td>Doctor</td>
+        <td>098785746568</td>
+        <td>50,000</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Ali</td>
+        <td>Engineer</td>
+        <td>098345566568</td>
+        <td>35,000</td>
+      </tr>
+      </tbody>
+      <tfoot>
+        <th colspan="4">Total</th>
+        <th>85,000</th>
+      </tfoot>
+    </table>
+
+
+
+    <h1>Form</h1>
+    <form action="#url" method="get" style="border: solid black 1px; margin: 5px; padding: 25px;">
+        <label>Name</label>
+        <input type="text" id="name">
+        <br>
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email">
+        <br>
+        <label for="message">Message</label>
+        <textarea name="message" id="message" rows="8" cols="20">
+
+        </textarea>
+        <br>
+        <button>Submit</button>
+    </form>
+  </body>
+</html>

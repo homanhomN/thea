@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<body>
+    <form action="/controller/create" method="post">
+
+        <label>Full Name</label>
+        <input type="text" id="name" required placeholder="Ahmad Ahmadi">
+<br>
+        <label>Passwrod</label>
+        <input type="password" id="password">
+        <br>
+        <label>Email</label>
+        <input type="email" id="email" required value="example@gmail.com">
+        <br>
+        <label>Age</label>
+        <input type="number" id="age" min="10" max="80">
+        <br>
+        <label>Male</label>
+        <input type="radio" name="gender" id="male" value="Male">
+        <label>Female</label>
+        <input type="radio" name="gender" id="female" value="Female">
+        <br>
+        <hr>
+        <label>Skills</label>
+        <br>
+        <label>Programming</label>
+        <input type="checkbox" value="Programming">
+        <label>JAVA</label>
+        <input type="checkbox" value="JAVA">
+        <label>C++</label>
+        <input type="checkbox" value="C++">
+        <br>
+        <label>Range Input</label>
+        <input type="range" id="range" min="1" max="10">
+        <br>
+        <label>File</label>
+        <input type="file" id="image">
+        <br>
+        <input type="hidden" value="34798ghefghwegu4">
+        <input type="search" id="search">
+        <br>
+        <input type="submit" value="Save">
+        <button type="reset">Reset</button>
+        <br>
+        <label>Country</label>
+        <select id="Country">
+            <option>Afghanistan</option>
+            <option>Albania</option>
+            <option>Argentina</option>
+            <option>Zambabui</option>
+        </select>
+        <br>
+        <label>Message</label>
+        <textarea id="message" rows="20"></textarea>
+    </form>
+</body>
+</html>

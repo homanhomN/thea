@@ -1,0 +1,33 @@
+.box-1 {
+    background-color: lightblue;
+    height: 200px;
+    width: 400px;
+    overflow: hidden;
+    border-style: solid;
+    border-color: black;
+    border-width: 1px;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 30px;
+}
+
+.box-2{
+    background-color: lightcoral;
+    border: dashed red 3px;
+    padding: 30px 15px;
+    margin: 40px 20px;
+}
+
+.container {
+    background-color: lightgreen;
+    padding: 20px;
+    margin: 20px;
+    border: 2px solid green;
+}
+
+#box-3 {
+    background-color: white;
+    border: 2px dotted black;
+    padding: 40px 30px 20px 10px;
+    margin: 10px 20px 30px 40px;
+}

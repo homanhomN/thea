@@ -1,0 +1,16 @@
+#second {
+    color: rebeccapurple;
+}
+
+.title {
+    color: brown;
+    background-color: aqua;
+    font-family: 'Lucida Sans', sans-serif;
+    font-size: 1rem;
+    font-weight: 300;
+    font-style: italic;
+}
+
+p{
+    line-height: 50px;
+}

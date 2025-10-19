@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Centering Elements</title>
+    <style>
+        .center-text{
+            text-align: center;
+            background-color: lightblue;
+            padding: 20px;
+        }
+
+        .center-div{
+            width: 300px;
+            padding: 30px;
+            background-color: lightcoral;
+            text-align: center;
+            margin: 0 auto;
+        }
+
+
+        .container{
+            display: flex;
+            justify-content: center;
+            background-color: antiquewhite;
+        }
+        .container-item{
+            background-color: aquamarine;
+            padding: 40px;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="center-text">
+      <h1>this is a text</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores sed qui
+        neque quia exercitationem quidem libero, nostrum incidunt officia
+        fugiat, iste, eligendi numquam. Pariatur nihil, eaque molestiae
+        aspernatur assumenda eveniet.
+      </p>
+    </div>
+
+    <br>
+    <br>
+
+    <div class="center-div">
+      <h1>this is a text</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores sed qui
+        neque quia exercitationem quidem libero, nostrum incidunt officia
+        fugiat, iste, eligendi numquam. Pariatur nihil, eaque molestiae
+        aspernatur assumenda eveniet.
+      </p>
+    </div>
+    <br>
+    <br>
+    <div class="container">
+        <div class="container-item">
+            <h3>Center with Flexbox!</h3>
+        </div>
+    </div>
+  </body>
+</html>

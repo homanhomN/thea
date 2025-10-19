@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+
+<body>
+  <div class="container p-5">
+    <form>
+      <p id="emailErrorMessage" class="text-danger"></p>
+      <p id="passwordErrorMessage" class="text-danger"></p>
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Email address</label>
+        <input type="text" class="form-control" id="email" aria-describedby="emailHelp">
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Password</label>
+        <input type="password" class="form-control" id="password">
+      </div>
+      <button class="btn btn-primary" id="submitBtn">Submit</button>
+    </form>
+  </div>
+
+
+  <script>
+        function father(){
+            const fathername = document.getElementById("fathernamein").value;
+            if(fathername !== ""){
+
+            }
+      const password = document.getElementById('password').value;
+      document.getElementById("passwordErrorMessage").innerHTML = ""
+      if (password != "") {
+        if (password.length < 8) {
+          document.getElementById("passwordErrorMessage").innerHTML = "Password must be at least 8 charecters"
+        }
+      }
+    }
+    document.getElementById('submitBtn').addEventListener('click', function (e) {
+      e.preventDefault()
+      checkEmail()
+      checkPassword()
+    })
+  </script>
+</body>
+
+</html>

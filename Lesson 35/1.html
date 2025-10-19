@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+      var products = [
+        { id: 1, name: "Computer", price: "5000$", inStock: false , color:"Balck"},
+        { id: 2, name: "Cell Phone", price: "1200$", inStock: false ,color: "Withe"},
+        { id: 3, name: "Car", price: "3000$", inStock: false ,color: "red"},
+      ];
+
+      for (i = 0; i < products.length; i++) {
+        console.log(
+          "Id " +
+            products[i].id +
+            "\nName " +
+            products[i].name +
+            "\nPrice " +
+            products[i].price +
+            "\n"
+        );
+        if(products[i].inStock){
+          console.log("Avialible")
+        }else{
+          console.log("Out of Stock")
+        }
+      }
+            var Names = [
+        { id: 4, name: "Ali", Salary: "5000$", Jop: "Doctor" , Age:40 , Live: true},
+        { id: 5, name: "Ahmad", Salary: "1200$", Jop: "Teacher" , Age:50, Live: false},
+        { id: 6, name: "Khan", Salary: "3000$", Jop: "Studend" , Age:18, Live: false},
+      ];
+            for (i = 0; i < Names.length; i++) {
+        console.log(
+          "Id " +
+            Names[i].id +
+            "\nName " +
+            Names[i].name +
+            "\nSalary " +
+            Names[i].Salary +
+            "\nJop" +
+            Names[i].Jop +
+            "\nAge" +
+            Names[i].Age +
+            "\n"
+        );
+        if(Names[i].Live){
+          console.log("Alive")
+        }else{
+          console.log("Dathe")
+        }
+      }
+    </script>
+</body>
+</html>

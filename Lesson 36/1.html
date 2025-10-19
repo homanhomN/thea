@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: #f8f9fa;
+        }
+
+        input[type="text"] {
+            padding: 8px;
+            width: 200px;
+            font-size: 14px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            padding: 8px 12px;
+            font-size: 14px;
+            margin-left: 5px;
+            border: none;
+            border-radius: 4px;
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+            margin-top: 20px;
+        }
+
+        .t {
+            background-color: #dc3545;
+            /* Bootstrap red */
+            color: white;
+            border: none;
+            border-radius: 4px;
+            padding: 6px 10px;
+            cursor: pointer;
+            font-size: 12px;
+            margin-left: 10px;
+            transition: background-color 0.2s ease-in-out;
+        }
+
+        .t:hover {
+            background-color: #c82333;
+            /* Darker red on hover */
+        }
+
+
+        li {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+            padding: 10px;
+            background-color: #e9f5ff;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        li button {
+            background-color: #dc3545;
+            margin-left: 10px;
+            font-size: 12px;
+            padding: 6px 10px;
+        }
+
+        li button:hover {
+            background-color: #c82333;
+        }
+    </style>
+
+</head>
+
+<body>
+    <input id="b" type="text">
+    <button id="c" onclick="a()">add</button>
+    <br>
+    <ul id="d"></ul>
+    <script>
+        function a() {
+            const item = document.getElementById("b");
+            const va = item.value.trim();
+            if (va !== "") {
+                const list = document.createElement("li");
+                list.innerHTML = va;
+                const del = document.createElement("button");
+                del.innerHTML = "Delete";
+                del.className = "t"
+                del.addEventListener('click', function () {
+                    list.remove();
+                    del.remove();
+
+
+                })
+                document.getElementById("d").appendChild(list);
+                document.getElementById("d").appendChild(del);
+                item.value = "";
+            }
+        }
+    </script>
+</body>
+
+</html>

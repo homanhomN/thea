@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<button id="cil" > click</button>
+
+<body>
+    <script>
+        function video1() {
+            return new Promise((resolve,) => {
+                setTimeout(() => {
+                    resolve("video one is plyed")
+
+                }, 1000)
+            })
+        }
+        function video2() {
+            return new Promise((resolve,) => {
+                setTimeout(() => {
+                    resolve("video two is plyed")
+
+                }, 1000)
+            })
+        }
+        function video3() {
+            return new Promise((resolve,) => {
+                setTimeout(() => {
+                    resolve("video three is plyed")
+
+                }, 1000)
+            })
+        }
+        function video4() {
+            return new Promise((resolve,) => {
+                setTimeout(() => {
+                    resolve("video four is plyed")
+
+                }, 1000)
+            })
+        }
+        document.getElementById("cil").addEventListener('cilck', async () => {
+                try {
+
+
+                    const vid1 = await video1();
+                    alert(vid1)
+                    const vid2 = await video2();
+                    alert(vid2)
+                    const vid3 = await video3();
+                    alert(vid3)
+                    const vid4 = await video4();
+                    alert(vid4)
+
+                }
+                catch (e) {
+                    alert(e)
+                }
+
+            }
+
+        )
+        
+        // async function ok() {
+        //     try {
+
+
+        //         const vid1 = await video1()
+        //         alert(vid1)
+        //         const vid2 = await video2()
+        //         alert(vid2)
+        //         const vid3 = await video3()
+        //         alert(vid3)
+        //         const vid4 = await video4()
+        //         alert(vid4)
+
+        //     }
+        //     catch (e) {
+        //         alert(e)
+        //     }
+
+        // }
+        // console.log(ok())
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple Recipe Finder</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Recipe Finder</h1>
+      <p>Search for your favorite recipes</p>
+    </header>
+    <div class="search-container">
+      <input type="text" id="search-input" placeholder="Search recipes..." />
+      <button id="search-btn">Search</button>
+    </div>
+
+    <div id="results-container"></div>
+
+    <script>
+      const recipes = [
+        {
+          name: "Qabuli Palaw",
+          description: "this is very good food for eating in the ........",
+        },
+        {
+          name: "Kabab",
+          description: "this is very good food for eating in the ........",
+        },
+        {
+          name: "Mulung Palaw",
+          description: "this is very good food for eating in the ........",
+        },
+        {
+          name: "Bargar",
+          description: "this is very good food for eating in the ........",
+        },
+        {
+          name: "Mantoo",
+          description: "this is very good food for eating in the ........",
+        },
+        {
+          name: "Pizza",
+          description: "this is very good food for eating in the ........",
+        },
+      ];
+
+      const resultsContainer = document.getElementById("results-container");
+      displayRecipe(recipes);
+      function displayRecipe(recipes) {
+        if (recipes.length !== 0) {
+          resultsContainer.innerHTML = recipes
+            .map(
+              (recipe) =>
+                `
+                <div class="recipe-card">
+                    <h2 class="recipe-title">${recipe.name}</h2>
+                    <p class="recipe-description">${recipe.description}</p>
+                </div>
+                `
+            )
+            .join("");
+        }
+      }
+
+      const searchInput = document.getElementById('search-input');
+      const searchBtn = document.getElementById('search-btn');
+
+      searchBtn.addEventListener('click', searchRecipes)
+      searchInput.addEventListener('keyup', (e)=>e.key === "Enter" && searchRecipes)
+
+      function searchRecipes(){
+        const searchTerm = searchInput.value.trim().toLowerCase();
+        const filtered = recipes.filter(recipe => recipe.name.toLocaleLowerCase().includes(searchTerm))
+        displayRecipe(filtered)
+      }
+
+      // var numbers = [1,2,3,4,5]
+      // console.log(numbers)
+      // let newList = numbers.filter(number=> number %2 ===1)
+      // console.log(newList)
+      // let newList2 = numbers.map(n => n* 2)
+      // console.log(newList2)
+    </script>
+  </body>
+</html>

@@ -1,0 +1,45 @@
+/* Basic Text Styling */
+body {
+  font-family: 'Arial', sans-serif;
+  color: #333;
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 20px;
+}
+#header {
+  background-color: #3498db;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+#first{
+  width: 20%;
+}
+#second{
+  width: 80%;
+}
+img{
+  width: 100px;
+}
+.title {
+  font-size: 2.5em;
+}
+.intro-text {
+  font-size: 18px;
+  color: #ecf0f1;
+}
+/* Box Model Examples */
+.box {
+  margin: 20px auto;
+  padding: 15px;
+  border: 2px solid #ccc;
+  max-width: 600px;
+  background-color: white;
+}
+/* Section Styling */
+.content {
+  margin-top: 30px;
+}
+h2 {
+  color: #2c3e50;
+}

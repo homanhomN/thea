@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // var arr = [1,2,3,'Ali',['milk','food'],{name: "Ali"}]
+      // console.log(arr);
+
+      var person = {
+        name: "Ahmad",
+        age: 37,
+        job: "Doctor",
+        job: "Engineer",
+        // address: ['Kabul','Herat'],
+        // cars: {
+        //   color: "red",
+        //   make: "Toyota",
+        //   model: "Corolla"
+        // }
+      };
+
+      // console.log(person.name)
+      // console.log(person['age'])
+
+      // person.age = 38
+
+      console.log(person);
+    </script>
+
+    <script>
+      var products = [
+        { id: 1, name: "Laptop", price: "18000", inStock: true },
+        { id: 2, name: "Desktop", price: "11000", inStock: true },
+        { id: 3, name: "Tablet", price: "38000", inStock: false },
+      ];
+
+      for (i = 0; i < products.length; i++) {
+        console.log(
+          "Id " +
+            products[i].id +
+            "\nName " +
+            products[i].name +
+            "\nPrice " +
+            products[i].price +
+            "\n"
+        );
+        if(products[i].inStock){
+          console.log("Avialible")
+        }else{
+          console.log("Out of Stock")
+        }
+      }
+    </script>
+  </body>
+</html>

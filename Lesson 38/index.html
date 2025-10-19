@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #userContainer{
+            padding: 15px;
+            display: flex;
+            justify-content: center;
+        }
+        .user{
+            border: 1px solid #000000;
+            padding: 10px;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>User List</h1>
+    <div id="userContainer">
+
+    </div>
+
+
+    <script>
+        const apiUrl = 'https://jsonplaceholder.typicode.com/users';
+        fetch(apiUrl)
+        .then(res => res.json())
+        .then(data => {
+            const container = document.getElementById("userContainer");
+            data.forEach(user => {
+                const userDiv = document.createElement("div");
+                userDiv.className = 'user';
+                userDiv.innerHTML = user.name
+                ;
+                container.appendChild(userDiv)
+            })
+        }
+        )
+        .catch(error => console.log(error))
+    </script>
+</body>
+</html>

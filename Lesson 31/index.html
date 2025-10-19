@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 id="title">hello world</h1>
+    <p class="paragraph">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt tempora
+      reprehenderit placeat sit ullam, perferendis quam odio, et repudiandae
+      harum nisi dicta velit provident voluptatum molestiae, modi magnam ratione
+      temporibus!
+    </p>
+    <input type="text" name="" id="" value="Ahmad" />
+    <textarea name="" id="txt1">
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Suscipit, temporibus a veritatis explicabo iure doloribus quo eos animi ducimus eveniet hic dignissimos cupiditate exercitationem repellendus expedita accusamus, ex deleniti! Officia!
+    </textarea>
+    <button id="btn1">Click here</button>
+
+    <script>
+      var title = document.getElementById("title").innerHTML;
+      console.log(title);
+      const para = document.getElementsByClassName("paragraph")[0].innerHTML;
+      console.log(para);
+      let input = document.getElementsByTagName("input")[0] 
+      input.value = "Mahmood";
+      console.log(input.value);
+      console.log(document.getElementById('txt1').content)
+      console.log(document.querySelector('textarea#txt1').value)
+
+
+
+
+
+
+      document.getElementById("btn1").addEventListener('click', ()=>{
+        alert("it's okay")
+      })
+    </script>
+  </body>
+</html>

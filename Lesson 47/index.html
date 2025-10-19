@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        // problem
+        // function getData(){
+        //     setTimeout(()=>{
+        //         return 'This is data'
+        //     },5000)
+        // }
+
+        // var data = getData()
+        // console.log(data)
+
+        function cleanHouse(){
+            return new Promise((resolve, reject)=>{
+                setTimeout(()=>{
+                    resolve("You cleaned the home 🏠")
+                },2000)
+            })
+        }
+
+        function washDishes(){
+            return new Promise((resolve, reject)=>{
+                setTimeout(()=>{
+                    resolve("You washed the Dishes 📡")
+                },2000)
+            })
+        }
+
+        function cooking(){
+            return new Promise((resolve, reject)=>{
+                setTimeout(()=>{
+                    reject("burned")
+                },2000)
+            })
+        }
+
+
+        // cleanHouse().then(value => console.log(value))
+        // washDishes().then(value => console.log(value))
+
+        async function doTaskes() {
+            try{
+                const cleaning = await cleanHouse()
+                console.log(cleaning)
+                
+                const washing = await washDishes()
+                console.log(washing)
+
+                
+                const cook = await cooking()
+                console.log(cook)
+
+                console.log("you did everything")
+            }
+            catch(error){
+                console.error(error)
+            }
+        }
+
+        doTaskes()
+    </script>
+</body>
+</html>

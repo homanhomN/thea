@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Positioning</title>
+    <style>
+      .container {
+        height: 300px;
+        background-color: aliceblue;
+        margin: 20px;
+        padding: 50px;
+        border: 2px solid #ddd;
+      }
+      .relative-box {
+        position: relative;
+        top: 100px;
+        left: 20px;
+        background-color: lightcoral;
+        margin: 20px;
+        padding: 50px;
+        border-radius: 5px;
+        width: fit-content;
+      }
+      .absolute-box {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        translate: -50% -50%;
+        background-color: aquamarine;
+        margin: 20px;
+        padding: 50px;
+        border-radius: 5px;
+        width: fit-content;
+      }
+      .content{
+        margin: 20px;
+        padding: 50px;
+        height: 300px;
+      }
+      .fixed-box{
+        position: fixed;
+        top: 10px;
+        width: 100%;
+        background-color: rgb(76, 46, 2);
+        color: white;
+        margin: 0;
+        padding: 30px;
+        text-align: center;
+        z-index: 1;
+      }
+      .sticky-box{
+        position: sticky;
+        top: 100px;
+        background-color: lightgreen;
+        padding: 30px;
+        margin: 20px;
+        text-align: center;
+        width: fit-content;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="fixed-box">
+      Fixed Lorem ipsum dolor sit amet consectetur adipisicing elit
+    </div>
+    <div class="content">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus adipisci,
+      voluptates dolore dolorem eaque quidem ducimus sit tempora quia eum nam
+      autem ratione consequuntur sed ab laudantium beatae. Aliquam, quod.
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus adipisci,
+      voluptates dolore dolorem eaque quidem ducimus sit tempora quia eum nam
+      autem ratione consequuntur sed ab laudantium beatae. Aliquam, quod.
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus adipisci,
+      voluptates dolore dolorem eaque quidem ducimus sit tempora quia eum nam
+      autem ratione consequuntur sed ab laudantium beatae. Aliquam, quod.
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus adipisci,
+      voluptates dolore dolorem eaque quidem ducimus sit tempora quia eum nam
+      autem ratione consequuntur sed ab laudantium beatae. Aliquam, quod.
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus adipisci,
+      voluptates dolore dolorem eaque quidem ducimus sit tempora quia eum nam
+      autem ratione consequuntur sed ab laudantium beatae. Aliquam, quod.
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus adipisci,
+      voluptates dolore dolorem eaque quidem ducimus sit tempora quia eum nam
+      autem ratione consequuntur sed ab laudantium beatae. Aliquam, quod.
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus adipisci,
+      voluptates dolore dolorem eaque quidem ducimus sit tempora quia eum nam
+      autem ratione consequuntur sed ab laudantium beatae. Aliquam, quod.
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus adipisci,
+      voluptates dolore dolorem eaque quidem ducimus sit tempora quia eum nam
+      autem ratione consequuntur sed ab laudantium beatae. Aliquam, quod.
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus adipisci,
+      voluptates dolore dolorem eaque quidem ducimus sit tempora quia eum nam
+      autem ratione consequuntur sed ab laudantium beatae. Aliquam, quod.
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus adipisci,
+      voluptates dolore dolorem eaque quidem ducimus sit tempora quia eum nam
+      autem ratione consequuntur sed ab laudantium beatae. Aliquam, quod.
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus adipisci,
+      voluptates dolore dolorem eaque quidem ducimus sit tempora quia eum nam
+      autem ratione consequuntur sed ab laudantium beatae. Aliquam, quod.
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus adipisci,
+      voluptates dolore dolorem eaque quidem ducimus sit tempora quia eum nam
+      autem ratione consequuntur sed ab laudantium beatae. Aliquam, quod.
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus adipisci,
+      voluptates dolore dolorem eaque quidem ducimus sit tempora quia eum nam
+      autem ratione consequuntur sed ab laudantium beatae. Aliquam, quod.
+    </div>
+    <div class="container">
+      <div class="relative-box">
+        Relative Lorem ipsum dolor sit amet consectetur adipisicing elit.
+      </div>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium,
+        assumenda quam pariatur saepe quidem nesciunt repellat voluptatibus
+        corporis molestias ratione? Commodi consectetur delectus odit earum,
+        aperiam cupiditate reiciendis facere qui?
+      </p>
+    </div>
+    <div class="content">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus adipisci,
+      voluptates dolore dolorem eaque quidem ducimus sit tempora quia eum nam
+      autem ratione consequuntur sed ab laudantium beatae. Aliquam, quod.
+    </div>
+    <div class="absolute-box">
+      Absolute Lorem ipsum dolor sit amet consectetur adipisicing elit
+    </div>
+
+    <div class="sticky-box">
+      Sticky Lorem ipsum dolor sit amet consectetur adipisicing elit
+    </div>
+    <div class="content">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus adipisci,
+      voluptates dolore dolorem eaque quidem ducimus sit tempora quia eum nam
+      autem ratione consequuntur sed ab laudantium beatae. Aliquam, quod.
+    </div>
+    <div class="content">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus adipisci,
+      voluptates dolore dolorem eaque quidem ducimus sit tempora quia eum nam
+      autem ratione consequuntur sed ab laudantium beatae. Aliquam, quod.
+    </div>
+    <div class="content">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus adipisci,
+      voluptates dolore dolorem eaque quidem ducimus sit tempora quia eum nam
+      autem ratione consequuntur sed ab laudantium beatae. Aliquam, quod.
+    </div>
+    <div class="content">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus adipisci,
+      voluptates dolore dolorem eaque quidem ducimus sit tempora quia eum nam
+      autem ratione consequuntur sed ab laudantium beatae. Aliquam, quod.
+    </div>
+    <div class="content">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus adipisci,
+      voluptates dolore dolorem eaque quidem ducimus sit tempora quia eum nam
+      autem ratione consequuntur sed ab laudantium beatae. Aliquam, quod.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Shopping</title>
+    <style>
+        .recipe-card {
+            border: 1px solid #ccc;
+            margin: 10px;
+            padding: 15px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Car Shopping</h1>
+        <p>Search for the car you want</p>
+    </header>
+
+    <div class="search-cont">
+        <input type="text" id="search" placeholder="Search Cars">
+        <button id="search-btn">Search</button>
+        <div id="results"></div>
+    </div>
+
+    <script>
+        const cars = [
+            {
+                name: "Corolla",
+                description: "this is a good car",
+                color: "Red",
+                price: "3000$"
+            },
+            {
+                name: "BMW",
+                description: "this is a good car",
+                color: "Black",
+                price: "7000$"
+            },
+            {
+                name: "Lamborghini",
+                description: "this is a good car",
+                color: "White",
+                price: "70000$"
+            },
+            {
+                name: "Passo",
+                description: "this is a good car",
+                color: "Red",
+                price: "1000$"
+            },
+            {
+                name: "Vitz",
+                description: "this is a good car",
+                color: "Gold",
+                price: "2000$"
+            },
+            {
+                name: "Corolla",
+                description: "this is a good car",
+                color: "Black",
+                price: "9000$"
+            },
+            {
+                name: "4Runner",
+                description: "this is a good car",
+                color: "Red",
+                price: "100000$"
+
+            },
+        ];
+
+        const res = document.getElementById("results");
+        const searchin = document.getElementById('search');
+        const searchbtn = document.getElementById('search-btn');
+
+        displayCars(cars);
+
+        function displayCars(carList) {
+            if (carList.length !== 0) {
+                res.innerHTML = carList.map(car =>
+                    `
+                    <div class="recipe-card">
+                        <h2 class="recipe-title">${car.name}</h2>
+                        <p class="recipe-description">${car.description}</p>
+                        <p class="recipe-description">Color: ${car.color}</p>
+                        <p class="recipe-description">Price: ${car.price}</p>
+                    </div>
+                    `
+                ).join("");
+            } else {
+                res.innerHTML = "<p>No cars found.</p>";
+            }
+        }
+
+        function searchcar() {
+            const searchtrm = searchin.value.trim().toLowerCase();
+            const filtered = cars.filter(car =>
+                car.name.toLowerCase().includes(searchtrm)
+            );
+            displayCars(filtered);
+        }
+
+        searchbtn.addEventListener('click', searchcar);
+        searchin.addEventListener('keyup', (e) => {
+            if (e.key === "Enter") {
+                searchcar();
+            }
+            searchin.addEventListener('keyup', () => {
+                searchcar();
+            });
+            let debounceTimer;
+            searchin.addEventListener('keyup', () => {
+                clearTimeout(debounceTimer);
+                debounceTimer = setTimeout(() => {
+                    searchcar();
+                }, 200);
+            });
+
+
+        });
+
+    </script>
+</body>
+
+</html>

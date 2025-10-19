@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="number" name="" id="ageInput" onchange="checkAge()" />
+    <p id="result"></p>
+    <script>
+      function checkAge() {
+        let age = document.getElementById("ageInput").value;
+        if (age >= 18 && age <= 100) {
+          document.getElementById("result").innerHTML = "<b>you are an adult</b>";
+        } else if (age < 18 && age > 0) {
+          document.getElementById("result").innerHTML = "you are a child";
+          console.log("you are a child");
+        } else {
+          document.getElementById("result").innerHTML = "wrong age";
+        }
+      }
+
+      document.getElementById('ageInput').addEventListener('mouseover',function(){
+        // code ...
+      })
+    </script>
+  </body>
+</html>

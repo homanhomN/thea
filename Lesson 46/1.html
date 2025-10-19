@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Adder</title>
+</head>
+
+<body>
+    <input type="number" id="num">
+    <input type="number" id="num1">
+    <button onclick="calculate()">Add Numbers</button>
+
+    <script>
+        function calculate() {
+            let num1 = parseFloat(document.getElementById("num").value);
+            let num2 = parseFloat(document.getElementById("num1").value);
+
+            if (!isNaN(num1) && !isNaN(num2)) {
+                let result = add12(num1, num2);
+                alert("Result: " + result);
+            } else {
+                alert("Please enter valid numbers.");
+            }
+        }
+
+        function add12(x = 0, y = 0) {
+            return x + y;
+        }
+        function calculate() {
+            let num1 = parseFloat(document.getElementById("num").value);
+            let num2 = parseFloat(document.getElementById("num1").value);
+
+            if (!isNaN(num1 = 0) && !isNaN(num2 = 0)) {
+                let result = add12(num1, num2);
+                alert("Result: " + result);
+            } else {
+                alert("Please enter valid numbers.");
+            }
+        }
+
+        function add12(x = 0, y = 0) {
+            return x + y;
+        }
+        function sum(x = 0, y = 0) {
+            alert(x + y)
+        }
+        sum(4, 6)
+
+        function sa(...the) {
+            alert(the)
+            return the.join(" ")
+        }
+        alert(sa("this", 6 + 5, "number"))
+        const arr1 = [1, 2, 3]
+        const arr2 = [4, 5, 6, 7, 8, 9]
+
+        const newArr = [...arr1, ...arr2] 
+        alert(newArr)
+    
+
+
+    </script>
+</body>
+
+</html>

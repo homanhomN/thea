@@ -1,0 +1,113 @@
+
+:root {
+    --primary: #2c3e50;
+    --secondary: #e74c3c;
+    --light: #ecf0f1;
+    --dark: #2c3e50;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--light);
+    color: var(--dark);
+    line-height: 1.6;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 20px 0;
+}
+
+h1 {
+    color: var(--secondary);
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.search-container {
+    max-width: 600px;
+    margin: 0 auto 30px;
+    display: flex;
+    gap: 10px;
+}
+
+#search-input {
+    flex: 1;
+    padding: 12px 15px;
+    border: 2px solid #ddd;
+    border-radius: 30px;
+    font-size: 1rem;
+    outline: none;
+    transition: all 0.3s;
+}
+
+#search-input:focus {
+    border-color: var(--secondary);
+}
+
+#search-btn {
+    padding: 12px 25px;
+    background-color: var(--secondary);
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+#search-btn:hover {
+    background-color: #c0392b;
+    transform: translateY(-2px);
+}
+
+#results-container {
+    max-width: 800px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.recipe-card {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.recipe-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+.recipe-title {
+    color: var(--primary);
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+    border-bottom: 2px solid var(--secondary);
+    padding-bottom: 5px;
+}
+
+.recipe-description {
+    color: #666;
+    font-size: 0.95rem;
+}
+
+.no-results {
+    text-align: center;
+    grid-column: 1 / -1;
+    color: #666;
+    padding: 40px 0;
+    font-size: 1.2rem;
+}

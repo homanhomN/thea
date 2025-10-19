@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Colors</title>
+    <style>
+        :root{
+            --main-color: #3498db;
+            --secondary-color: rgb(255, 100, 70);
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            /* background-color: #00b800; */
+            /* background-color: rgb(255, 200, 100); */
+            background: linear-gradient(to left, var(--main-color), var(--secondary-color));
+            /* background: radial-gradient(circle, red, black, yellow); */
+            text-align: center;
+            padding: 15px;
+        }
+
+        .bg-image{
+            height: 800px;
+            margin: 2rem;
+            background-image: url(./car.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-attachment: fixed;
+            color: white;
+            border-radius: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2rem;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="title">CSS Project</h1>
+        <p>Using HEX, RGB, Gradients, background Image and Variables</p>
+    </header>
+
+    <section class="bg-image">
+        Background Image
+    </section>
+</body>
+</html>

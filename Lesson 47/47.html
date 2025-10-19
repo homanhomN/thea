@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const myPromise = new Promise((resolve, reject) => {
+        setTimeout(() => {
+          if (false) {
+            resolve("Operation succeeded!");
+          } else {
+            reject("Operation failed.");
+          }
+        }, 2000);
+      })
+        .then((result) => {
+          console.log(result); // "Operation succeeded!"
+        })
+        .catch((error) => {
+          console.error(error);
+        });
+
+      //   async function add(a ,b) {
+      //     await console.log(a + b)
+      //   }
+
+      //   add(3,7)
+
+      async function fetchData() {
+        try {
+          const result = await myPromise;
+          console.log("Async/Await Result:", result);
+        } catch (error) {
+          console.error("Error caught:", error);
+        }
+      }
+
+      fetchData();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            text-align: center;
+            padding: 10px;
+            margin: 0;
+            height: 2000px;
+        }
+        #loading{
+            font-size: 24px;
+            color: black;
+            font-weight: bold;
+            margin: 5px;
+        }
+        .progress-bar{
+            width: 200px;
+            border: 2px solid lightblue;
+            height: 20px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+        .progress{
+            height: 100%;
+            width: 0%;
+            background-color: rgb(0, 42, 255);
+            border-radius: 5px;
+            transition: width 0.3s;
+        }
+
+        #header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: rgb(255, 0, 0);
+            padding: 20px;
+            text-align: center;
+            transition: all 0.3s ease-in-out;
+        }
+        #header.scrolled{
+            background-color: rgb(0, 255, 13);
+            color: white;
+            padding: 10px 20px;
+        }
+    </style>
+</head>
+<body>
+    <header id="header">My Website</header>
+
+    <div style="padding-top: 50px;">
+    <div id="loading">Loading</div>
+    <div class="progress-bar">
+        <div class="progress"></div>
+    </div>
+    </div>
+
+    
+
+
+    <script>
+        window.addEventListener('scroll',()=>{
+            const header = document.getElementById('header');
+
+            if(window.scrollY > 100){
+                header.classList.add('scrolled')
+            }else{
+                header.classList.remove('scrolled')
+            }
+        })
+
+
+
+        let dotCount = 0
+        const maxDot = 3;
+        let progress = 0;
+        const loadingEl = document.getElementById('loading');
+        const progressEl = document.querySelector('.progress')
+
+        const loadingInterval = setInterval(()=>{
+            dotCount = (dotCount +1) % (maxDot + 1)
+            console.log(dotCount)
+            let dots = '.'.repeat(dotCount)
+            loadingEl.textContent = 'Loading' + dots
+        },500)
+
+        const progressInterval = setInterval(()=>{
+            progress += 5;
+            progressEl.style.width = progress + "%";
+            if(progress >= 100){
+                clearInterval(loadingInterval)
+                clearInterval(progressInterval)
+                loadingEl.textContent = "Loaded"
+                progressEl.style.backgroundColor = "green"
+            }
+            console.log(progress)
+        },200)
+
+
+
+
+    </script>
+</body>
+</html>

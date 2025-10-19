@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <h1>Cars Shoping</h1>
+        <p>search what car do you want</p>
+
+    </header>
+    <div class="search-cont">
+        <input type="text" id="search" placeholder="Search Cars">
+        <button id="search-btn">Search</button>
+        <div id="results"></div>
+        <script>
+            const cars = [
+                {
+                    name: "crola",
+                    description: "this is a good car",
+                    color: "red",
+                    price: "3000$"
+                },
+                {
+                    name: "BMW",
+                    description: "this is a good car",
+                    color: "Balck",
+                    price: "7000$"
+                },
+                {
+                    name: "lomborgini",
+                    description: "this is a good car",
+                    color: "withe",
+                    price: "70000$"
+                },
+                {
+                    name: "passo",
+                    description: "this is a good car",
+                    color: "red",
+                    price: "1000$"
+                },
+                {
+                    name: "vits",
+                    description: "this is a good car",
+                    color: "gold",
+                    price: "2000$"
+                },
+                {
+                    name: "crola",
+                    description: "this is a good car",
+                    color: "Black",
+                    price: "9000$"
+                },
+                {
+                    name: "4runner",
+                    description: "this is a good car",
+                    color: "red",
+                    price: "100000$"
+                },
+            ];
+            const res = document.getElementById("results");
+            displayCars(cars);
+            function displayCars(car) {
+                if (car.length !== 0) {
+                    res.innerHTML = car
+                        .map(
+                            (car) =>
+                                `
+                <div class="recipe-card">
+                    <h2 class="recipe-title">${car.name}</h2>
+                    <p class="recipe-description">${car.description}</p>
+                    <p class="recipe-description">${car.color}</p>
+                    <p class="recipe-description">${car.price}</p>
+                </div>
+                `
+
+                        )
+                        .join("");
+                }
+            }
+            const searchin = document.getElementById('search');
+            const searchbtn = document.getElementById('seach-btn');
+
+            searchbtn.addEventListener('click', searchcar)
+            searchin.addEventListener('keyup', (e) => e.key === "Enter" && searchcar)
+
+            function searchcar() {
+                const searchtrm = searchin.value.trim().toLowerCase();
+                const fil = cars.filter(car => car.name.toLocaleLowerCase().includes(searchtrm))
+                displayCars(fil)
+            }
+        </script>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .transition-button{
+            background-color: #0974d9;
+            color: white;
+            border: none;
+            padding: 12px, 24px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+        }
+
+        .transition-button:hover{
+            background-color: #2294ff;
+            transform: scale(1.03);
+        }
+
+        .transition-button:active{
+            background-color: #075eaf;
+            transform: scale(0.98);
+        }
+        .transition-button:focus{
+            outline: none;
+            box-shadow: 0 0 5px #075eaf;
+        }
+    </style>
+</head>
+<body>
+    <button class="transition-button">Click Here</button>
+</body>
+</html>

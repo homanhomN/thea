@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+<button onclick="add(4,5)" onmouseover="style.backgroundColor = '#000'"
+onmouseout="style.backgroundColor = '#fff'"
+>Click here</button>
+<input type="text">
+  <script>
+    function add(a ,b){
+      alert(a+b)
+    }
+
+    document.getElementsByTagName("input")[0].addEventListener('keydown', function(){
+      document.getElementsByTagName("input")[0].style.color = 'red';
+    })
+    
+  </script>
+</body>
+</html>
